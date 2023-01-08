@@ -1,3 +1,5 @@
 build/
 node_modules/
 src/serviceWorker.js
+# eslint=>檢查工具
+# 不要檢查這些檔案
