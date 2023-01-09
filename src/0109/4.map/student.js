@@ -17,6 +17,7 @@ function Student() {
   return (
     <>
       <h1>學生資料範例(map)</h1>
+      {[<li>1</li>, <li>2</li>, <li>3</li>, <li>4</li>]}
       <ul>
         {/* key值的選擇
             1. 資料來自資料庫，優先使用資料庫中的key(主鍵/外鍵)當key值
