@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   { id: 107001, name: '張佳蓉', age: 21 },
   { id: 107002, name: '楊智云', age: 20 },
   { id: 107003, name: '陳語合', age: 19 },
