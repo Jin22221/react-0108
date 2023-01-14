@@ -107,6 +107,28 @@ function MultipleInput() {
         />
         顯示輸入的密碼
         <br />
+        <div>
+          <label>確認密碼</label>
+          <input
+            // 用showPassword的布林值來切換文字輸入框類型
+            type={user.showPassword ? 'text' : 'password'}
+            name="password"
+            value={user.password}
+            onChange={handleFieldChange}
+            required
+            //最少要輸入6個字元 最多10個
+            minLength={6}
+            maxLength={10}
+          />
+        </div>
+        <input
+          type="checkbox"
+          name="showPassword"
+          checked={user.showPassword}
+          onChange={handleFieldChange}
+        />
+        顯示輸入的密碼
+        <br />
         <button type="submit">提交</button>
         {/* 在form標記中加入button，建議寫上type，因為沒加註type相當於submit */}
         <button
