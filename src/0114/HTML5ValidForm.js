@@ -5,11 +5,11 @@ function MultipleInput() {
   //2.當使用物件作為state時，初始值的選擇盡可能不要使用空物件或null
   //3. 物件的初始值，使用表單元素的名稱作為屬性名
   const [user, setUser] = useState({
-    fullname: 'bob',
-    email: '',
-    username: '',
-    password: '',
-    showPassword: '', //用於切換密碼欄位類型使用
+    fullname: '包柏',
+    email: 'k33a@gmail.com',
+    username: 'abc',
+    password: '12345',
+    showPassword: false, //用於切換密碼欄位類型使用
   })
 
   const handleFieldChange = (e) => {
@@ -28,10 +28,35 @@ function MultipleInput() {
     //3
     setUser(newUser)
   }
+
+  // 表單完全合法(通過驗証)後才會觸發
+  const handleSubmit = (e) => {
+    //阻擋預設的form送出
+    e.preventDefault()
+
+    //獲得目前的表單輸入值
+    //1.從stste獲得
+    console.log(user, 'user')
+    //2.用FormData API獲得
+    const formData = new FormData(e.target)
+    console.log(formData.get('fullname'), formData.get('email'))
+
+    //作額外的/客製的檢查工作
+
+    //作額資料整理/整合工作
+
+    //作送伺服器(fetch, ajax...)
+  }
+
+  //表單有發生驗証錯誤時，會觸發此事件
+  const handleInvaild = (e) => {
+    console.log('檢查有錯誤了！')
+  }
+
   return (
     <>
       <h1>HTML5表單驗證</h1>
-      <form action="">
+      <form action="" onSubmit={handleSubmit} onInvalid={handleInvaild}>
         <div>
           <label>姓名</label>
           <input
@@ -82,8 +107,22 @@ function MultipleInput() {
         />
         顯示輸入的密碼
         <br />
-        <button type="buttton">提交</button>
+        <button type="submit">提交</button>
         {/* 在form標記中加入button，建議寫上type，因為沒加註type相當於submit */}
+        <button
+          type="button"
+          onClick={() => {
+            setUser({
+              fullname: '包柏',
+              email: 'k33a@gmail.com',
+              username: 'abc',
+              password: '12345',
+              showPassword: true,
+            })
+          }}
+        >
+          填入正確範例資料
+        </button>
       </form>
     </>
   )
