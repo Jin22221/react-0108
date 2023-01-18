@@ -1,14 +1,24 @@
-// import Counter from './0109/1-counter'
-// import JSXValue from './0109/2-jsx/2-JSXvalue'
-// import Parent from './0110/3-prop-父母子女元件/Parent'
-// import Idform from './0114/idform'
-// import RefsForm from './0114/refsForm'
-import User from './0118/3-3.react-bootstrap範例/0118/4.react-bs/ReactBS5'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+
+//引入頁面元件
+import Home from './pages/Home'
+import About from './pages/About'
+import Products from './pages/Products'
+import User from './pages/User'
+import NotFound from './pages/NotFound'
+
 function App() {
   return (
-    <>
-      <User />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="product" element={<Products />} />
+        <Route path="user" element={<User />} />
+        <Route path="*" element={<NotFound />} />
+        {/* 404找不到網頁用的頁面 */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 
