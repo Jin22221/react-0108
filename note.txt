@@ -1,1 +1,2 @@
 build=>webpack 打包成壓縮檔
+image lazy loading 可以先卡住位置，不然先空白畫面然後突然載入一堆圖片，使用者體驗較差
