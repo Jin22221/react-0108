@@ -6,9 +6,10 @@ function Counter2() {
     <>
       <h1
         onClick={() => {
+          const newTotal = total + 1
           console.log(`before call setTotal, total = ${total}`)
-          setTotal(total + 1)
-          console.log(`after call setTotal, total = ${total}`)
+          setTotal(newTotal)
+          console.log(`after call setTotal, total = ${newTotal}`)
         }}
       >
         {total}
