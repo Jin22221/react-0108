@@ -4,7 +4,9 @@
 
 //引入頁面元件
 // import Home from './pages/Home'
-import JSXValue2 from './0109/3.jsx/JSXValue2'
+// import JSXValue2 from './0109/3.jsx/JSXValue2'
+// import Student from './0109/4-1.map/student'
+import Student from './0109/4-2.map/Student'
 // import About from './pages/About'
 // import Products from './pages/Products'
 // import User from './pages/User'
@@ -12,7 +14,7 @@ import JSXValue2 from './0109/3.jsx/JSXValue2'
 
 function App() {
   return (
-    <JSXValue2 />
+    <Student />
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/" element={<MainLayout />}>
