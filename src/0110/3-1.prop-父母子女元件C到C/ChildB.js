@@ -7,6 +7,7 @@ function ChildB(props) {
       <h1>Child-B</h1>
       <button
         onClick={() => {
+          // 利用父母元件給的設定state的函式來傳值回父母元件
           props.setDataFromChild(cData)
         }}
       >

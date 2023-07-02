@@ -6,7 +6,9 @@
 // import Counter2 from './0109/7.state/Counter2'
 // import Login from './0109/7.state/Login'
 // import Gearing from './0109/8.useEffect連動/Gearing'
-import Parent from './0110/1.props解構2/Parent'
+// import Parent from './0110/1.props解構2/Parent'
+// import Parent from './0110/3-0.prop-父母子女元件C到P'
+import Parent from './0110/3-1.prop-父母子女元件C到C/Parent'
 function App() {
   return <Parent />
 }
