@@ -5,10 +5,10 @@
 // import Counter2 from './0109/6.jsx-inline-if/Counter2'
 // import Counter2 from './0109/7.state/Counter2'
 // import Login from './0109/7.state/Login'
-import Gearing from './0109/8.useEffect連動/Gearing'
-
+// import Gearing from './0109/8.useEffect連動/Gearing'
+import Parent from './0110/1.props解構2/Parent'
 function App() {
-  return <Gearing />
+  return <Parent />
 }
 
 export default App
