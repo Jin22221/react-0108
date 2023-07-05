@@ -41,7 +41,35 @@ function ShoppingCart() {
           >
             +
           </button>
-          <button onClick={() => {}}>–</button>
+          <button
+            onClick={() => {
+              // 預期:目前商品數量是1了，再按下去會變 0 -> 即刪除它
+              if (product.count === 1) {
+                // 1, 2
+                const newProducts = products.filter((v, i) => {
+                  return v.id !== product.id
+                })
+
+                setProducts(newProducts)
+
+                return // 跳出函式，下面的程式碼不會再執行
+              }
+              // console.log(product.id)
+
+              const newProducts = products.map((v, i) => {
+                if (v.id === product.id) {
+                  console.log(v.name, v.count)
+                  return { ...v, count: v.count - 1 }
+                } else {
+                  return { ...v }
+                }
+              })
+
+              setProducts(newProducts)
+            }}
+          >
+            –
+          </button>
         </li>
       ))}
     </ul>
