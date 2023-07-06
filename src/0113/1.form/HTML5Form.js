@@ -29,6 +29,10 @@ function HTML5Form() {
     })
   )
 
+  // select
+  const cityOptions = ['高雄市', '台北市', '台中市']
+  const [city, setCity] = useState('')
+
   return (
     <>
       <h1>可控的表單元件範例</h1>
@@ -143,6 +147,26 @@ function HTML5Form() {
             </div>
           )
         })}
+      </section>
+      <section id="select">
+        <h2>下拉清單(select)</h2>
+        {/* 值對應到狀態 */}
+        <select
+          value={city}
+          onChange={(e) => {
+            setCity(e.target.value)
+          }}
+        >
+          {/* 對應state(city)初始值的選項 */}
+          <option value="">請選擇城市</option>
+          {cityOptions.map((v, i) => {
+            return (
+              <option key={i} value={v}>
+                {v}
+              </option>
+            )
+          })}
+        </select>
       </section>
     </>
   )
