@@ -11,12 +11,12 @@
 // import Parent from './0110/3-1.prop-父母子女元件C到C/Parent'
 // import Menu from './0110/4.練習題-選單樣式套用/Menu'
 // import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
-
-import HTML5Form from './0113/1.form/HTML5Form'
-
 // import ShoppingCart from './0110/6-1.練習題-小型購物車/ShoppingCart'
+// import HTML5Form from './0113/1.form/HTML5Form'
+import Exchange from './0113/money-exchange'
+
 function App() {
-  return <HTML5Form />
+  return <Exchange />
 }
 
 export default App

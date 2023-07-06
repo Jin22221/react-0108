@@ -9,7 +9,7 @@ function Exchange() {
   }
   const convertTWDtoUSD = (money) => {
     //轉換後取小數點後2位
-    return (money * 30.38).toFixed(2)
+    return (money / 30.38).toFixed(2)
   }
   // console.log(inputTWD)
   return (
@@ -18,6 +18,7 @@ function Exchange() {
       <div>
         <input
           type="number"
+          // 因為一開始初始值 0 會顯示在畫面上
           value={inputTWD === 0 ? '' : inputTWD}
           onChange={(e) => {
             const newInputTWD = Number(e.target.value)
@@ -34,6 +35,8 @@ function Exchange() {
           onChange={(e) => {
             const newInputUSD = Number(e.target.value)
             setInputUSD(newInputUSD)
+            // console.log(newInputUSD)
+            // 注意要用e.target.value的值，不能依賴到inputUSD最後更動的值
             setInputTWD(convertUSDtoTWD(newInputUSD))
           }}
         />
