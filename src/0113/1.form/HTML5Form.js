@@ -18,6 +18,17 @@ function HTML5Form() {
   // state中要記錄使用者選了哪幾個值(複選)
   const [likeList, setLikeList] = useState([])
   const fruitOptions = ['香蕉', '芒果', '鳳梨', '水蜜桃']
+
+  // checkbox group 第二種做法
+  // state中要記錄各選項的物件
+  // ex.[{id: 0, value:'貓', checked: false}, ...]
+  const petOptions = ['貓', '狗', '兔']
+  const [pets, setPets] = useState(
+    petOptions.map((v, i) => {
+      return { id: i, value: v, checked: false }
+    })
+  )
+
   return (
     <>
       <h1>可控的表單元件範例</h1>
@@ -71,7 +82,7 @@ function HTML5Form() {
         <label>我已閱讀並同意XXX</label>
       </section>
       <section id="checkbox-group">
-        <h2>核取方塊-群組(checkbox)</h2>
+        <h2>核取方塊1-群組(checkbox)</h2>
         {fruitOptions.map((v, i) => {
           return (
             <div key={i}>
@@ -98,6 +109,37 @@ function HTML5Form() {
                 }}
               />
               <label>{v}</label>
+            </div>
+          )
+        })}
+      </section>
+      <section id="checkbox-group">
+        <h2>核取方塊2-群組(checkbox)</h2>
+        {pets.map((v, i) => {
+          return (
+            <div key={i}>
+              <input
+                type="checkbox"
+                value={v.value}
+                // 布林值，代表目前是否有被使用者選中，為真就勾起來
+                checked={v.checked}
+                onChange={(e) => {
+                  const newPets = pets.map((v2, i2) => {
+                    // 當目前 id與 i(使用者點下的那個項目的索引值)相等時，checked值改變
+                    if (v2.id === i) return { ...v2, checked: !v2.checked }
+                    return { ...v2 }
+                  })
+                  setPets(newPets)
+
+                  // 精簡寫法
+                  // setPets(
+                  //   pets.map((v2, i2) =>
+                  //     v2.id === i ? { ...v2, checked: !v2.checked } : { ...v2 }
+                  //   )
+                  // )
+                }}
+              />
+              <label>{v.value}</label>
             </div>
           )
         })}
