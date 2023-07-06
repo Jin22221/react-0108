@@ -157,7 +157,7 @@ function HTML5Form() {
             setCity(e.target.value)
           }}
         >
-          {/* 對應state(city)初始值的選項 */}
+          {/* 對應state(city)初始值(空白字串)的選項 */}
           <option value="">請選擇城市</option>
           {cityOptions.map((v, i) => {
             return (
