@@ -1,0 +1,38 @@
+* {
+  font: 20px Calibri;
+}
+
+body {
+  background: #ccc;
+}
+
+#theForm {
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 250px;
+  margin: 20px auto;
+  padding: 20px;
+
+  div {
+    margin: 10px 0;
+  }
+}
+
+label,
+#submit,
+.clear {
+  text-transform: capitalize;
+}
+
+#submit {
+  margin-right: 20px;
+}
+
+#total {
+  border: 1px solid #888;
+  width: 205px;
+  height: 50px;
+  color: maroon;
+  text-align: center;
+  line-height: 1.5;
+}

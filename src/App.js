@@ -13,10 +13,12 @@
 // import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
 // import ShoppingCart from './0110/6-1.練習題-小型購物車/ShoppingCart'
 // import HTML5Form from './0113/1.form/HTML5Form'
-import Exchange from './0113/money-exchange'
+// import Exchange from './0113/money-exchange'
+
+import BMI from './0113/BMI/BMI'
 
 function App() {
-  return <Exchange />
+  return <BMI />
 }
 
 export default App
