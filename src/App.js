@@ -15,10 +15,12 @@
 // import HTML5Form from './0113/1.form/HTML5Form'
 // import Exchange from './0113/money-exchange'
 
-import BMI from './0113/BMI/BMI'
+import BirthForm from './0113/birth/BirthForm'
+
+// import BMI from './0113/BMI/BMI'
 
 function App() {
-  return <BMI />
+  return <BirthForm />
 }
 
 export default App
