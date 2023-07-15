@@ -1,4 +1,3 @@
-import log from 'eslint-plugin-react/lib/util/log'
 import React from 'react'
 
 function Idform() {

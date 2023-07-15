@@ -14,13 +14,19 @@
 // import ShoppingCart from './0110/6-1.練習題-小型購物車/ShoppingCart'
 // import HTML5Form from './0113/1.form/HTML5Form'
 // import Exchange from './0113/money-exchange'
-
-import BirthForm from './0113/birth/BirthForm'
-
 // import BMI from './0113/BMI/BMI'
+// import BirthForm from './0113/birth/BirthForm'
+
+import Idform from './0114/1.refs/idform'
+import RefsForm from './0114/1.refs/refsForm'
 
 function App() {
-  return <BirthForm />
+  return (
+    <>
+      <Idform />
+      <RefsForm />
+    </>
+  )
 }
 
 export default App

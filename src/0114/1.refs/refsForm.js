@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 
 function RefsForm() {
+  // 對照getElementById，如果沒找到會回傳null，預設值使用null
+  // 下面的useRef(null)呼叫後會回傳一個物件值`{ current: null }`
   const inputRef = useRef(null)
   console.log(inputRef)
   return (
