@@ -17,14 +17,15 @@
 // import BMI from './0113/BMI/BMI'
 // import BirthForm from './0113/birth/BirthForm'
 
-import Idform from './0114/1.refs/idform'
-import RefsForm from './0114/1.refs/refsForm'
+import MultipleInput from './0114/2.form-valid/MultipleInput'
+
+// import Idform from './0114/1.refs/idform'
+// import RefsForm from './0114/1.refs/refsForm'
 
 function App() {
   return (
     <>
-      <Idform />
-      <RefsForm />
+      <MultipleInput />
     </>
   )
 }
