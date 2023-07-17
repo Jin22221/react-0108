@@ -1,0 +1,21 @@
+.list {
+  list-style: none;
+
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+.inputText {
+  margin-bottom: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.active {
+  color: green;
+  font-weight: 600px;
+}
