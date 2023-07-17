@@ -16,16 +16,15 @@
 // import Exchange from './0113/money-exchange'
 // import BMI from './0113/BMI/BMI'
 // import BirthForm from './0113/birth/BirthForm'
-
-import MultipleInput from './0114/2.form-valid/MultipleInput'
-
 // import Idform from './0114/1.refs/idform'
 // import RefsForm from './0114/1.refs/refsForm'
+// import MultipleInput from './0114/2.form-valid/MultipleInput'
+import HTML5ValidForm from './0114/HTML5ValidForm'
 
 function App() {
   return (
     <>
-      <MultipleInput />
+      <HTML5ValidForm />
     </>
   )
 }
