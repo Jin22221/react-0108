@@ -37,7 +37,22 @@ function TodoApp() {
         {todos.map((v, i) => {
           return (
             <li key={v.id} className={v.completed ? 'completed' : 'active'}>
-              <input type="checkbox" checked={v.completed} />
+              <input
+                type="checkbox"
+                checked={v.completed}
+                onChange={() => {
+                  // 1
+                  const newTodos = todos.map((v2) => {
+                    return { ...v2 }
+                  })
+
+                  // 2. 在新的變數值(陣列/物件)上作處理
+                  newTodos[i].completed = !newTodos[i].completed
+
+                  // 3
+                  setTodos(newTodos)
+                }}
+              />
               {v.text}
             </li>
           )
