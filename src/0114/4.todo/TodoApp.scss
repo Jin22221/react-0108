@@ -16,6 +16,18 @@
 }
 
 .active {
-  color: green;
+  color: maroon;
   font-weight: 600px;
+}
+
+.delete {
+  color: maroon;
+  background: #fff;
+  border: 1px solid;
+  margin-left: 10px;
+
+  &:hover {
+    background: maroon;
+    color: #fff;
+  }
 }

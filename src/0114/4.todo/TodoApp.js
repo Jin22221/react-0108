@@ -9,6 +9,33 @@ function TodoApp() {
     { id: 2, text: '學react', completed: true },
   ])
 
+  const addTodo = (text) => {
+    const newTodo = {
+      id: Number(new Date()),
+      text: text,
+      completed: false,
+    }
+
+    setTodos([newTodo, ...todos])
+  }
+
+  const toggleCompleted = (id) => {
+    const newTodos = todos.map((v) => {
+      if (id === v.id) return { ...v, completed: !v.completed }
+      return { ...v }
+    })
+    setTodos(newTodos)
+  }
+
+  const deleteTodo = (id) => {
+    const newTodos = todos.filter((v, i) => {
+      // console.log(`v.id= ${v.id}`, `id= ${id}`)
+      return v.id !== id
+    })
+
+    setTodos(newTodos)
+  }
+
   return (
     <>
       <h1>待辦事項</h1>
@@ -22,11 +49,13 @@ function TodoApp() {
         }}
         onKeyDown={(e) => {
           if (e.key === 'Enter' && inputText.trim !== '') {
-            // 新增的物件
-            const newTodo = { id: Number(new Date()), text: e.target.value }
+            // // 新增的物件
+            // const newTodo = { id: Number(new Date()), text: e.target.value }
 
-            // 共通三步驟
-            setTodos([newTodo, ...todos])
+            // // 共通三步驟
+            // setTodos([newTodo, ...todos])
+
+            addTodo(e.target.value)
 
             // 清空文字輸入框
             setInputText('')
@@ -41,19 +70,23 @@ function TodoApp() {
                 type="checkbox"
                 checked={v.completed}
                 onChange={() => {
-                  // 1
-                  const newTodos = todos.map((v2) => {
-                    return { ...v2 }
-                  })
-
-                  // 2. 在新的變數值(陣列/物件)上作處理
-                  newTodos[i].completed = !newTodos[i].completed
-
-                  // 3
-                  setTodos(newTodos)
+                  toggleCompleted(v.id)
                 }}
               />
               {v.text}
+              <button
+                className="delete"
+                onClick={() => {
+                  //   const newTodos = todos.filter((v2) => {
+                  //     console.log(`v.id= ${v.id}   `, `v2.id= ${v2.id}`)
+                  //     return v.id !== v2.id
+                  //   })
+                  //   setTodos(newTodos)
+                  deleteTodo(v.id)
+                }}
+              >
+                x
+              </button>
             </li>
           )
         })}
