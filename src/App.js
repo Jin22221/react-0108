@@ -24,8 +24,9 @@
 // import TodoApp from './0117/1-1拆分元件/TodoApp'
 // import TodoApp from './0117/1-5拆分元件 -資料夾對應階層/TodoApp'
 // import TodoApp from './0117/1-6.練習題-todo-過濾項目操作介面與state/TodoApp'
+// import TodoApp from './0117/1-7.練習題-todo-過濾項目按鈕改為map與加入中文/TodoApp'
 
-import TodoApp from './0117/1-7.練習題-todo-過濾項目按鈕改為map與加入中文/TodoApp'
+import TodoApp from './0117/1-8.練習題-todo-過濾功能完成/TodoApp'
 
 function App() {
   return (
