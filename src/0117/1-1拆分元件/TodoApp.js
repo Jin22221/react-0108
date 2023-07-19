@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './TodoApp.scss'
-
+import AddForm1 from './AddForm1'
+import TodoList from './TodoList'
 
 function TodoApp() {
-  const [inputText, setInputText] = useState('')
-
   const [todos, setTodos] = useState([
     { id: 1, text: '買牛奶', completed: false },
     { id: 2, text: '學react', completed: true },
@@ -41,40 +40,12 @@ function TodoApp() {
     <>
       <h1>待辦事項</h1>
       <hr />
-      <addForm
-        inputText={inputText}
-        setInputText={setInputText}
-        addTodo={addTodo}
+      <AddForm1 addTodo={addTodo} />
+      <TodoList
+        todos={todos}
+        toggleCompleted={toggleCompleted}
+        deleteTodo={deleteTodo}
       />
-      <ul className="list">
-        {todos.map((v, i) => {
-          return (
-            <li key={v.id} className={v.completed ? 'completed' : 'active'}>
-              <input
-                type="checkbox"
-                checked={v.completed}
-                onChange={() => {
-                  toggleCompleted(v.id)
-                }}
-              />
-              {v.text}
-              <button
-                className="delete"
-                onClick={() => {
-                  //   const newTodos = todos.filter((v2) => {
-                  //     console.log(`v.id= ${v.id}   `, `v2.id= ${v2.id}`)
-                  //     return v.id !== v2.id
-                  //   })
-                  //   setTodos(newTodos)
-                  deleteTodo(v.id)
-                }}
-              >
-                x
-              </button>
-            </li>
-          )
-        })}
-      </ul>
     </>
   )
 }
