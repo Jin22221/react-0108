@@ -1,0 +1,50 @@
+.container {
+  margin: 0 auto;
+  max-width: 415px;
+  margin-top: 20px;
+}
+
+.list {
+  // list-style: none;
+
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+.inputText {
+  margin-bottom: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.active {
+  color: maroon;
+  font-weight: 600px;
+}
+
+.delete {
+  color: maroon;
+  background: #fff;
+  border: 1px solid;
+  margin-left: 10px;
+
+  &:hover {
+    background: maroon;
+    color: #fff;
+  }
+}
+
+.filter-btn-active {
+  background: maroon;
+  color: #fff;
+  border: 1px solid black;
+}
+
+.filter-btn-normal {
+  background: #e7e7e7;
+  border: 1px solid black;
+}
