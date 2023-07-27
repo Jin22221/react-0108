@@ -28,13 +28,14 @@
 // import TodoApp from './0117/1-8.練習題-todo-過濾功能完成/TodoApp'
 // import TodoApp from './0117/1-9.練習題-todo-拆分過濾功能元件/TodoApp'
 // import TodoApp from './0117/1-11.練習題-todo-編輯項目介面與state/TodoApp'
+// import TodoApp from './0117/1-12.練習題-todo-編輯項目功能完成/TodoApp'
 
-import TodoApp from './0117/1-12.練習題-todo-編輯項目功能完成/TodoApp'
+import Main from './0117/2-lifecycle/Main'
 
 function App() {
   return (
     <>
-      <TodoApp />
+      <Main />
     </>
   )
 }

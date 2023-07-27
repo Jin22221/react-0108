@@ -3,13 +3,19 @@ import { useEffect, useState } from 'react'
 function FC() {
   const [total, setTotal] = useState(0)
 
-  const [user, setUser] = useState({ name: 'Amy' })
+  // const [user, setUser] = useState({ name: 'Amy' })
 
   //模擬didMount
   useEffect(() => {
-    console.log('模擬componentDidMount', 'total=', total) //相依性陣列中放入物件或陣列，只要有設定到state就一定會執行
+    console.log('模擬componentDidMount+didUpdate', 'total=', total) //相依性陣列中放入物件或陣列，只要有設定到state就一定會執行
     //使用Object
   }, [total])
+
+  useEffect(() => {
+    return () => {
+      console.log('模擬WillUnmount')
+    }
+  }, [])
 
   return (
     <>
