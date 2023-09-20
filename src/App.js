@@ -29,13 +29,32 @@
 // import TodoApp from './0117/1-9.練習題-todo-拆分過濾功能元件/TodoApp'
 // import TodoApp from './0117/1-11.練習題-todo-編輯項目介面與state/TodoApp'
 // import TodoApp from './0117/1-12.練習題-todo-編輯項目功能完成/TodoApp'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Main from './0117/2-lifecycle/Main'
+import MainLayout from './layouts/MainLayout'
+
+import Home from './pages/Home'
+import About from './pages/About'
+import User from './pages/User'
+import Products from './pages/Products'
+import NotFound from './pages/NotFound'
+
+// import Main from './0117/2-lifecycle/Main'
 
 function App() {
   return (
     <>
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="user" element={<User />} />
+            <Route path="product" element={<Products />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

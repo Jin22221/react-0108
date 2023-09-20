@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <header className="d-flex align-items-center pb-3 mb-5 border-bottom">
         <a
           href="/"
-          class="d-flex align-items-center text-dark text-decoration-none"
+          className="d-flex align-items-center text-dark text-decoration-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="32"
-            class="me-2"
+            className="me-2"
             viewBox="0 0 118 94"
             role="img"
           >
@@ -24,26 +24,26 @@ function Header() {
               fill="currentColor"
             ></path>
           </svg>
-          <span class="fs-4">Starter template</span>
+          <span className="fs-4">Starter template</span>
         </a>
-        <ul class="nav">
-          <li class="nav-item">
-            <Link class="nav-link active" aria-current="page" to="/">
+        <ul className="nav">
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to="/">
               首頁
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link active" aria-current="page" to="about">
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to="about">
               關於我們
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link active" aria-current="page" to="product">
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to="product">
               產品
             </Link>
           </li>
-          <li class="nav-item">
-            <Link class="nav-link active" aria-current="page" to="user">
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to="user">
               會員
             </Link>
           </li>
